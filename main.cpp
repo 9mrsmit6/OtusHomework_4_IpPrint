@@ -4,14 +4,16 @@
 #include <tuple>
 #include <string>
 
+
+
 template <typename T>
-void print_ip(T value, typename std::enable_if_t<std::is_integral<T>::value>)
+typename std::enable_if<!std::is_integral<T>::value>::type print_ip(T value)
 {
-    std::cout<<"OVER"<<std::endl;
+   std::cout<<"OVER"<<std::endl;
 }
 
 template <typename T>
-void print_ip(T value)
+typename std::enable_if<std::is_integral<T>::value>::type print_ip(T value)
 {
     std::cout<<"INTEGER"<<std::endl;
 }
