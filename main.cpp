@@ -1,44 +1,5 @@
 #include "printIp.hpp"
-
 #include <tuple>
-
-
-//template< std::size_t I, class T >
-//struct tuple_element;
-
-//// recursive case
-//template< std::size_t I, class Head, class... Tail >
-//struct tuple_element   <  I, std::tuple<Head, Tail...>   >: std::tuple_element<  I-1, std::tuple<Tail...>> { };
-
-//// base case
-//template< class Head, class... Tail >
-//struct tuple_element<0, std::tuple<Head, Tail...>> {
-//   using type = Head;
-//};
-
-
-//template <class T>
-//struct testTuple
-//{
-
-//    static bool detector(T tuple){}
-//    static constexpr bool value=true;
-//};
-
-template <class H, class ...T>
-void vax(T... a)
-{
-    std::cout<<"H"<<std::endl;
-    vax(a...);
-}
-
-template <class ...T>
-void vax(T... a)
-{
-    std::cout<<"END"<<std::endl;
-}
-
-
 
 
 int main()
@@ -50,9 +11,17 @@ int main()
     print_ip( std::string{"Hello, World"} ); // Hello, World!
     print_ip( std::vector<int>{100, 200, 300, 400} ); // 100.200.300.400
     print_ip( std::list<short>{400, 300, 200, 100} ); // 400.300.200.100
-//    print_ip( std::make_tuple(123, 456, 789, 0) ); // 123.456.789.0
+    print_ip( std::make_tuple(123, 456, 789, 0) ); // 123.456.789.0
 
-    vax(10,12,12,12,12);
+//   std::cout<<  testTuple_v<   decltype(std::make_tuple(123, 456, 789, 0))> <<std::endl;
 
-    return 0;
+
+ //   printTuple( std::make_tuple(123, 456, 789, 0) );
+//   std::cout<<test<std::tuple<int, float, int, int>,1>()<<std::endl;
+//   std::cout<<test<std::tuple<int, float, int, int>,2>()<<std::endl;
+////   std::cout<<test<std::tuple<int, float, int, int>,3>()<<std::endl;
+
+//    std::cout<<(std::tuple_size_v<std::tuple<int, int, int, int>>-1);
+
+   return 0;
 }

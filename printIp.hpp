@@ -7,6 +7,57 @@
 #include <tuple>
 #include <string>
 
+
+template<typename T>
+struct isTuple
+{
+    template<typename ...U>
+    static bool detect(const std::tuple<U...>&);
+    static std::nullptr_t detect(...);
+
+    static constexpr bool value = !std::is_same_v<    std::nullptr_t, decltype(detect(  std::declval<T>() )) > ;
+};
+
+
+template <class T>
+inline constexpr bool isTuple_v = isTuple<T>::value;
+
+
+template <class T>
+struct testTuple
+{
+
+    template<class U, std::size_t i>
+    static constexpr bool test(typename std::enable_if_t< (std::tuple_size_v<U> >=2)&&(i>=(std::tuple_size_v<U>-2)), bool> = true)
+    {
+        using Type=std::tuple_element_t<i, U>;
+        using Type2=std::tuple_element_t<i+1, U>;
+        return std::is_same_v<Type, Type2>;
+
+    }
+
+    template<class U, std::size_t i>
+    static constexpr bool test(typename std::enable_if_t< (std::tuple_size_v<U> >=2)&&(i<(std::tuple_size_v<U>-2)), bool> = true)
+    {
+        using Type=std::tuple_element_t<i, U>;
+        using Type2=std::tuple_element_t<i+1, U>;
+        return std::is_same_v<Type, Type2>&&test<U,i+1>();
+    }
+
+    template<class U, std::size_t i>
+    static constexpr bool test(typename std::enable_if_t< (std::tuple_size_v<U> < 2)&&(std::tuple_size_v<U> != 0), bool> = true)
+    {
+        return true;
+    }
+
+    static constexpr bool isOk=test<T,0>();
+};
+
+template <class T>
+inline constexpr bool testTuple_v = testTuple<T>::isOk;
+
+
+
 template<typename T>
 struct isContainer
 {
@@ -41,6 +92,7 @@ void print_ip(const T& value, typename std::enable_if<std::is_same<T, std::strin
     std::cout<<value<<std::endl;
 }
 
+
 template <typename T>
 void print_ip(const T& value, typename std::enable_if<isContainer<T>::value, bool>::type = true)
 {
@@ -52,6 +104,29 @@ void print_ip(const T& value, typename std::enable_if<isContainer<T>::value, boo
 
         std::cout<<v;
     }
+    std::cout<<std::endl;
+}
+
+
+template< typename T,  std::size_t n=0>
+void printTuple(const T& tuple)
+{
+    if constexpr (n!=0) {   std::cout << '.';   }
+    std::cout<< std::get<n>(tuple);
+
+    if constexpr (n != std::tuple_size_v<T>- 1)
+    {
+        printTuple<T, n + 1>(tuple);
+    }
+}
+
+
+
+template <typename T>
+void print_ip(const T& value, typename std::enable_if<isTuple_v<T>, bool>::type = true)
+{
+    static_assert(testTuple_v<T>);
+    printTuple(value);
     std::cout<<std::endl;
 }
 
