@@ -13,7 +13,7 @@ int main()
     print_ip( std::list<short>{400, 300, 200, 100} ); // 400.300.200.100
     print_ip( std::make_tuple(123, 456, 789, 0) ); // 123.456.789.0
 
-//   std::cout<<  testTuple_v<   decltype(std::make_tuple(123, 456, 789, 0))> <<std::endl;
+   std::cout<<  testTuple2<decltype(std::make_tuple(123, 456, 789.0, 0)) >::isOk <<std::endl;
 
 
  //   printTuple( std::make_tuple(123, 456, 789, 0) );

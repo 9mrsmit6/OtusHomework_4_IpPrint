@@ -7,7 +7,7 @@
 #include <tuple>
 #include <string>
 
-
+//!Проверка кортеж ли это
 template<typename T>
 struct isTuple
 {
@@ -22,7 +22,28 @@ struct isTuple
 template <class T>
 inline constexpr bool isTuple_v = isTuple<T>::value;
 
+//!Проверка кортежа на однородность вторая версия
+template <class T>
+struct testTuple2
+{
 
+    template<class F, class S, class ...Tail>
+    static constexpr bool test(const std::tuple<F,S,Tail...>&)
+    {
+        return std::is_same_v<F, S>&&  test<S,Tail...>  ( std::tuple<S,Tail...>() );
+    }
+
+    template<class F>
+    static constexpr bool test(const std::tuple<F>&)
+    {
+        return true;
+    }
+
+    static constexpr bool isOk=test (  T()  );
+};
+
+
+//!Проверка кортежа на однородность первая версия
 template <class T>
 struct testTuple
 {
@@ -57,7 +78,7 @@ template <class T>
 inline constexpr bool testTuple_v = testTuple<T>::isOk;
 
 
-
+//!Проверка кортежа на однородность вторая версия
 template<typename T>
 struct isContainer
 {
@@ -72,7 +93,7 @@ struct isContainer
 };
 
 
-
+//!Печать целочисленного аргументв
 template <typename T>
 void print_ip(const T& value, typename std::enable_if<std::is_integral<T>::value, bool>::type = true)
 {
@@ -86,13 +107,14 @@ void print_ip(const T& value, typename std::enable_if<std::is_integral<T>::value
 
 }
 
+//!Печать строкиы
 template <typename T>
 void print_ip(const T& value, typename std::enable_if<std::is_same<T, std::string>::value, bool>::type = true)
 {
     std::cout<<value<<std::endl;
 }
 
-
+//!Печать контейнера
 template <typename T>
 void print_ip(const T& value, typename std::enable_if<isContainer<T>::value, bool>::type = true)
 {
@@ -107,7 +129,7 @@ void print_ip(const T& value, typename std::enable_if<isContainer<T>::value, boo
     std::cout<<std::endl;
 }
 
-
+//!вспомогательяная функция печать кортежа
 template< typename T,  std::size_t n=0>
 void printTuple(const T& tuple)
 {
@@ -121,7 +143,7 @@ void printTuple(const T& tuple)
 }
 
 
-
+//!Печать кортежа
 template <typename T>
 void print_ip(const T& value, typename std::enable_if<isTuple_v<T>, bool>::type = true)
 {
