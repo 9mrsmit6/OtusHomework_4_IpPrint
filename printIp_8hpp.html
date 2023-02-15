@@ -1,0 +1,363 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ru">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.9.6"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>print_ip: Файл printIp.hpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">print_ip<span id="projectnumber">&#160;0.2</span>
+   </div>
+   <div id="projectbrief">Otus Homework 4 -&gt; IpPrint</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Создано системой Doxygen 1.9.6 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+var searchBox = new SearchBox("searchBox", "search/",'.html');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() {
+  initMenu('',true,false,'search.php','Поиск');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<div id="MSearchResults">
+<div class="SRPage">
+<div id="SRIndex">
+<div id="SRResults"></div>
+<div class="SRStatus" id="Loading">Загрузка...</div>
+<div class="SRStatus" id="Searching">Поиск...</div>
+<div class="SRStatus" id="NoMatches">Не найдено</div>
+</div>
+</div>
+</div>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">Классы</a> &#124;
+<a href="#func-members">Функции</a> &#124;
+<a href="#var-members">Переменные</a>  </div>
+  <div class="headertitle"><div class="title">Файл printIp.hpp</div></div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;vector&gt;</code><br />
+<code>#include &lt;list&gt;</code><br />
+<code>#include &lt;tuple&gt;</code><br />
+<code>#include &lt;string&gt;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Граф включаемых заголовочных файлов для printIp.hpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="printIp_8hpp__incl.png" border="0" usemap="#aprintIp_8hpp" alt=""/></div>
+<map name="aprintIp_8hpp" id="aprintIp_8hpp">
+<area shape="rect" title=" " alt="" coords="163,5,245,31"/>
+<area shape="rect" title=" " alt="" coords="5,79,77,104"/>
+<area shape="rect" title=" " alt="" coords="101,79,160,104"/>
+<area shape="rect" title=" " alt="" coords="185,79,223,104"/>
+<area shape="rect" title=" " alt="" coords="248,79,299,104"/>
+<area shape="rect" title=" " alt="" coords="323,79,378,104"/>
+</map>
+</div>
+</div><div class="textblock"><div class="dynheader">
+Граф файлов, в которые включается этот файл:</div>
+<div class="dyncontent">
+<div class="center"><img src="printIp_8hpp__dep__incl.png" border="0" usemap="#aprintIp_8hppdep" alt=""/></div>
+<map name="aprintIp_8hppdep" id="aprintIp_8hppdep">
+<area shape="rect" title=" " alt="" coords="5,5,88,31"/>
+<area shape="rect" href="main_8cpp.html" title=" " alt="" coords="9,79,84,104"/>
+</map>
+</div>
+</div>
+<p><a href="printIp_8hpp_source.html">См. исходные тексты.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="nested-classes" name="nested-classes"></a>
+Классы</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisTuple.html">isTuple&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка кортеж ли это  <a href="structisTuple.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtestTuple2.html">testTuple2&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка кортежа на однородность вторая версия  <a href="structtestTuple2.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structtestTuple.html">testTuple&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка кортежа на однородность первая версия  <a href="structtestTuple.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structisContainer.html">isContainer&lt; T &gt;</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Проверка кортежа на однородность вторая версия  <a href="structisContainer.html#details">Подробнее...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Функции</h2></td></tr>
+<tr class="memitem:a813d926010eea2bcf21eae8a18eeaa69"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a813d926010eea2bcf21eae8a18eeaa69"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="printIp_8hpp.html#a813d926010eea2bcf21eae8a18eeaa69">print_ip</a> (const T &amp;value, typename std::enable_if&lt; std::is_integral&lt; T &gt;::value, bool &gt;::type=true)</td></tr>
+<tr class="memdesc:a813d926010eea2bcf21eae8a18eeaa69"><td class="mdescLeft">&#160;</td><td class="mdescRight">Печать целочисленного аргументв  <br /></td></tr>
+<tr class="separator:a813d926010eea2bcf21eae8a18eeaa69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20087becd22e0235988e1cf2a7bcbad1"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a20087becd22e0235988e1cf2a7bcbad1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="printIp_8hpp.html#a20087becd22e0235988e1cf2a7bcbad1">print_ip</a> (const T &amp;value, typename std::enable_if&lt; std::is_same&lt; T, std::string &gt;::value, bool &gt;::type=true)</td></tr>
+<tr class="memdesc:a20087becd22e0235988e1cf2a7bcbad1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Печать строкиы  <br /></td></tr>
+<tr class="separator:a20087becd22e0235988e1cf2a7bcbad1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5981ac962e4f1f4bd03a7c174cdde399"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:a5981ac962e4f1f4bd03a7c174cdde399"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="printIp_8hpp.html#a5981ac962e4f1f4bd03a7c174cdde399">print_ip</a> (const T &amp;value, typename std::enable_if&lt; <a class="el" href="structisContainer.html">isContainer</a>&lt; T &gt;::value, bool &gt;::type=true)</td></tr>
+<tr class="memdesc:a5981ac962e4f1f4bd03a7c174cdde399"><td class="mdescLeft">&#160;</td><td class="mdescRight">Печать контейнера  <br /></td></tr>
+<tr class="separator:a5981ac962e4f1f4bd03a7c174cdde399"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad01e3adc98deabdaaefa7b89eb8332c0"><td class="memTemplParams" colspan="2">template&lt;typename T , std::size_t n = 0&gt; </td></tr>
+<tr class="memitem:ad01e3adc98deabdaaefa7b89eb8332c0"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="printIp_8hpp.html#ad01e3adc98deabdaaefa7b89eb8332c0">printTuple</a> (const T &amp;tuple)</td></tr>
+<tr class="memdesc:ad01e3adc98deabdaaefa7b89eb8332c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">вспомогательяная функция печать кортежа  <br /></td></tr>
+<tr class="separator:ad01e3adc98deabdaaefa7b89eb8332c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac419e1098ef16f92a5e8b6ab69067d40"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
+<tr class="memitem:ac419e1098ef16f92a5e8b6ab69067d40"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="printIp_8hpp.html#ac419e1098ef16f92a5e8b6ab69067d40">print_ip</a> (const T &amp;value, typename std::enable_if&lt; <a class="el" href="printIp_8hpp.html#a1dffd69a053f8aea7253dc47593f1284">isTuple_v</a>&lt; T &gt;, bool &gt;::type=true)</td></tr>
+<tr class="memdesc:ac419e1098ef16f92a5e8b6ab69067d40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Печать кортежа  <br /></td></tr>
+<tr class="separator:ac419e1098ef16f92a5e8b6ab69067d40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
+Переменные</h2></td></tr>
+<tr class="memitem:a1dffd69a053f8aea7253dc47593f1284"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a1dffd69a053f8aea7253dc47593f1284"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="printIp_8hpp.html#a1dffd69a053f8aea7253dc47593f1284">isTuple_v</a> = <a class="el" href="structisTuple.html">isTuple</a>&lt;T&gt;::value</td></tr>
+<tr class="separator:a1dffd69a053f8aea7253dc47593f1284"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54d3298ef2c29ea8807642306c0de2ed"><td class="memTemplParams" colspan="2">template&lt;class T &gt; </td></tr>
+<tr class="memitem:a54d3298ef2c29ea8807642306c0de2ed"><td class="memTemplItemLeft" align="right" valign="top">constexpr bool&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="printIp_8hpp.html#a54d3298ef2c29ea8807642306c0de2ed">testTuple_v</a> = <a class="el" href="structtestTuple.html">testTuple</a>&lt;T&gt;::isOk</td></tr>
+<tr class="separator:a54d3298ef2c29ea8807642306c0de2ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Функции</h2>
+<a id="a5981ac962e4f1f4bd03a7c174cdde399" name="a5981ac962e4f1f4bd03a7c174cdde399"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5981ac962e4f1f4bd03a7c174cdde399">&#9670;&#160;</a></span>print_ip() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_ip </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename std::enable_if&lt; <a class="el" href="structisContainer.html">isContainer</a>&lt; T &gt;::value, bool &gt;::type&#160;</td>
+          <td class="paramname"> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Печать контейнера </p>
+
+</div>
+</div>
+<a id="ac419e1098ef16f92a5e8b6ab69067d40" name="ac419e1098ef16f92a5e8b6ab69067d40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac419e1098ef16f92a5e8b6ab69067d40">&#9670;&#160;</a></span>print_ip() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_ip </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename std::enable_if&lt; <a class="el" href="printIp_8hpp.html#a1dffd69a053f8aea7253dc47593f1284">isTuple_v</a>&lt; T &gt;, bool &gt;::type&#160;</td>
+          <td class="paramname"> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Печать кортежа </p>
+
+</div>
+</div>
+<a id="a813d926010eea2bcf21eae8a18eeaa69" name="a813d926010eea2bcf21eae8a18eeaa69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a813d926010eea2bcf21eae8a18eeaa69">&#9670;&#160;</a></span>print_ip() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_ip </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename std::enable_if&lt; std::is_integral&lt; T &gt;::value, bool &gt;::type&#160;</td>
+          <td class="paramname"> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Печать целочисленного аргументв </p>
+
+</div>
+</div>
+<a id="a20087becd22e0235988e1cf2a7bcbad1" name="a20087becd22e0235988e1cf2a7bcbad1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20087becd22e0235988e1cf2a7bcbad1">&#9670;&#160;</a></span>print_ip() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void print_ip </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>value</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">typename std::enable_if&lt; std::is_same&lt; T, std::string &gt;::value, bool &gt;::type&#160;</td>
+          <td class="paramname"> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Печать строкиы </p>
+
+</div>
+</div>
+<a id="ad01e3adc98deabdaaefa7b89eb8332c0" name="ad01e3adc98deabdaaefa7b89eb8332c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad01e3adc98deabdaaefa7b89eb8332c0">&#9670;&#160;</a></span>printTuple()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T , std::size_t n = 0&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">void printTuple </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>tuple</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>вспомогательяная функция печать кортежа </p>
+
+</div>
+</div>
+<h2 class="groupheader">Переменные</h2>
+<a id="a1dffd69a053f8aea7253dc47593f1284" name="a1dffd69a053f8aea7253dc47593f1284"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1dffd69a053f8aea7253dc47593f1284">&#9670;&#160;</a></span>isTuple_v</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool isTuple_v = <a class="el" href="structisTuple.html">isTuple</a>&lt;T&gt;::value</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a54d3298ef2c29ea8807642306c0de2ed" name="a54d3298ef2c29ea8807642306c0de2ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a54d3298ef2c29ea8807642306c0de2ed">&#9670;&#160;</a></span>testTuple_v</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;class T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">constexpr bool testTuple_v = <a class="el" href="structtestTuple.html">testTuple</a>&lt;T&gt;::isOk</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">constexpr</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Создано системой&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.6
+</small></address>
+</body>
+</html>
